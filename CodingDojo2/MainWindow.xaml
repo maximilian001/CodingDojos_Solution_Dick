@@ -6,20 +6,54 @@
         xmlns:local="clr-namespace:CodingDojo2"
         mc:Ignorable="d"
         Title="Smart Home System" Height="700" Width="850" Background="Black">
-    <Grid ShowGridLines="True">
+    <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="185"/>
+            <ColumnDefinition Width="140"/>
         </Grid.ColumnDefinitions>
 
-        <Border BorderBrush="Red" Width="Auto" BorderThickness="2" HorizontalAlignment="Stretch" Margin="10,10,10,10" VerticalAlignment="Top">
+        <Border BorderBrush="Red" BorderThickness="2" HorizontalAlignment="Stretch" Margin="10,10,10,10" VerticalAlignment="Top">
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
                 <Image Source="Bilder/Warning-WF.png" Height="35"></Image>
                 <Label Foreground="White" FontSize="25">Überlauf Grauwasser</Label>
-            </StackPanel>
+            </StackPanel> 
         </Border>
 
+        <Label Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="18">..tbd..</Label>
 
+        <Border BorderThickness="1,0,0,0" Grid.Column="1" BorderBrush="Gray" HorizontalAlignment="Stretch">
+            <StackPanel Margin="0,10,0,0">
+                <StackPanel Orientation="Horizontal" VerticalAlignment="Top" Margin="10,0,0,0">
+                    <Image Source="Bilder/Cloud sun02-WF.png" Height="35"></Image>
+                    <Label Foreground="White" VerticalAlignment="Center">12 °</Label>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" VerticalAlignment="Top" Margin="10,0,0,0">
+                    <Image Source="Bilder/Wind.png" Height="35"></Image>
+                    <Label Foreground="White" VerticalAlignment="Center">12 km/h</Label>
+                </StackPanel>
+                
+                <Border BorderBrush="Gray" BorderThickness="0,0,0,1" Margin="7,0,7,0"></Border>
+                
+                <StackPanel Orientation="Horizontal" VerticalAlignment="Top" Margin="10,0,0,0">
+                    <Image Source="Bilder/Solar.png" Height="35"></Image>
+                    <Label Foreground="White" VerticalAlignment="Center">3.545 W</Label>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" VerticalAlignment="Top" Margin="10,0,0,0">
+                    <Image Source="Bilder/Man-01.png" Height="35"></Image>
+                    <Label Foreground="White" VerticalAlignment="Center">0</Label>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" VerticalAlignment="Top" Margin="10,0,0,0">
+                    <Image Source="Bilder/Lock-WF.png" Height="35"></Image>
+                    <Label Foreground="White" VerticalAlignment="Center">OK</Label>
+                </StackPanel>
+
+                <Border BorderBrush="Gray" BorderThickness="0,0,0,1" Margin="7,0,7,0"></Border>
+
+                
+                
+            </StackPanel>
+
+        </Border>
 
     </Grid>
 </Window>
