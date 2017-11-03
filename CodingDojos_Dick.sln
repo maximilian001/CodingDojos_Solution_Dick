@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodingDojo2", "CodingDojo2\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodingDojo1", "CodingDojo1\CodingDojo1.csproj", "{039447BA-0C15-4C6D-9DDF-BD2FF81C98DE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodingDojo3", "CodingDojo3\CodingDojo3.csproj", "{5CECF7DF-CC8E-4A06-B6A8-372A35FCE4E3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{039447BA-0C15-4C6D-9DDF-BD2FF81C98DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{039447BA-0C15-4C6D-9DDF-BD2FF81C98DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{039447BA-0C15-4C6D-9DDF-BD2FF81C98DE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5CECF7DF-CC8E-4A06-B6A8-372A35FCE4E3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5CECF7DF-CC8E-4A06-B6A8-372A35FCE4E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5CECF7DF-CC8E-4A06-B6A8-372A35FCE4E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5CECF7DF-CC8E-4A06-B6A8-372A35FCE4E3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
