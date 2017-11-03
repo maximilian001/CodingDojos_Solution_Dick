@@ -22,7 +22,7 @@ namespace CodingDojo3
     {
         public MainWindow()
         {
-            //CD3 Dick 
+            //Start CD3 Dick
             InitializeComponent();
         }
     }
