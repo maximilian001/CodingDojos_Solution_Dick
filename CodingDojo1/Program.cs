@@ -11,6 +11,8 @@ namespace CodingDojo1
     {
         static void Main(string[] args)
         {
+
+            var a = "ab";
             CodingDojo1.Stack.Stack<int> MyStack = new CodingDojo1.Stack.Stack<int>();
             MyStack.Push(2);
             MyStack.Push(3);
