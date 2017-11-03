@@ -22,6 +22,7 @@ namespace CodingDojo2
     {
         public MainWindow()
         {
+            //CD 2 - WPF Design Dick
             InitializeComponent();
         }
     }
