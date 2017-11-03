@@ -21,7 +21,7 @@
 
         <Label Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="18">..tbd..</Label>
 
-        <Border BorderThickness="1,0,0,0" Grid.Column="1" BorderBrush="Gray" HorizontalAlignment="Stretch">
+        <Border Grid.Column="1" BorderThickness="1,0,0,0" BorderBrush="Gray" HorizontalAlignment="Stretch">
             <StackPanel Margin="0,10,0,0">
                 <StackPanel Orientation="Horizontal" VerticalAlignment="Top" Margin="10,0,0,0">
                     <Image Source="Bilder/Cloud sun02-WF.png" Height="35"></Image>
