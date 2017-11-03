@@ -12,5 +12,14 @@
             <ColumnDefinition Width="185"/>
         </Grid.ColumnDefinitions>
 
+        <Border BorderBrush="Red" Width="Auto" BorderThickness="2" HorizontalAlignment="Stretch" Margin="10,10,10,10" VerticalAlignment="Top">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <Image Source="Bilder/Warning-WF.png" Height="35"></Image>
+                <Label Foreground="White" FontSize="25">Überlauf Grauwasser</Label>
+            </StackPanel>
+        </Border>
+
+
+
     </Grid>
 </Window>
