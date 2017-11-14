@@ -2,6 +2,7 @@ using GalaSoft.MvvmLight;
 using System;
 using System.Windows.Threading;
 
+
 namespace CodingDojo3.ViewModel
 {
     /// <summary>
