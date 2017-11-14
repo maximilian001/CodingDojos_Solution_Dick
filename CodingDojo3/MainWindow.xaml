@@ -1,96 +1,100 @@
-﻿<Window x:Class="CodingDojo3.MainWindow"
+﻿<Window
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CodingDojo3"
+        xmlns:ViewModel="clr-namespace:CodingDojo3.ViewModel" x:Class="CodingDojo3.MainWindow"
         mc:Ignorable="d"
         Title="Smart Home System" Height="615" Width="700" Background="Black">
+    <Window.DataContext>
+        <ViewModel:MainViewModel/>
+    </Window.DataContext>
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="140"/>
         </Grid.ColumnDefinitions>
         <StackPanel>
-        <Border BorderBrush="Red" BorderThickness="2" HorizontalAlignment="Stretch" Margin="10,10,10,10" VerticalAlignment="Top">
-            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                <Image Source="Bilder/Warning-WF.png" Height="35"></Image>
-                <Label Foreground="White" FontSize="25">Überlauf Grauwasser</Label>
-            </StackPanel>
-        </Border>
-            <Label Foreground="White" Margin="7,0,0,0" FontSize="18">Aktoren</Label>
-            <DataGrid Margin="12,2,12,0"></DataGrid>
+            <Border BorderBrush="Red" BorderThickness="2" HorizontalAlignment="Stretch" Margin="10,10,10,10" VerticalAlignment="Top">
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                    <Image Source="Bilder/Warning-WF.png" Height="35"/>
+                    <Label Foreground="White" FontSize="25" Content="Überlauf Grauwasser"/>
+                </StackPanel>
+            </Border>
+            <Label Foreground="White" Margin="7,0,0,0" FontSize="18" Content="Aktoren"/>
+            <DataGrid Margin="12,2,12,0"/>
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,10,12,0">
-                <Button Margin="5,0" Padding="3" Foreground="White" Background="Black">Hinzufügen</Button>
-                <Button Padding="3" Foreground="White" Background="Black">Löschen</Button>
+                <Button Margin="5,0" Padding="3" Foreground="White" Background="Black" Content="Hinzufügen"/>
+                <Button Padding="3" Foreground="White" Background="Black" Content="Löschen"/>
             </StackPanel>
-            <Label Foreground="White" Margin="7,0,0,0" FontSize="18">Sensoren</Label>
-            <DataGrid Margin="12,2,12,0"></DataGrid>
+            <Label Foreground="White" Margin="7,0,0,0" FontSize="18" Content="Sensoren"/>
+            <DataGrid Margin="12,2,12,0"/>
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,10,12,0">
-                <Button Margin="5,0" Padding="3" Foreground="White" Background="Black">Hinzufügen</Button>
-                <Button Padding="3" Foreground="White" Background="Black">Löschen</Button>
+                <Button Margin="5,0" Padding="3" Foreground="White" Background="Black" Content="Hinzufügen"/>
+                <Button Padding="3" Foreground="White" Background="Black" Content="Löschen"/>
             </StackPanel>
         </StackPanel>
-       
+
 
         <!--<Label Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="18">..tbd..</Label>-->
 
         <Border Grid.Column="1" BorderThickness="1,0,0,0" BorderBrush="Gray" HorizontalAlignment="Stretch">
             <StackPanel Margin="0,10,0,0">
                 <StackPanel Orientation="Horizontal" VerticalAlignment="Top" Margin="10,0,0,0">
-                    <Image Source="Bilder/Cloud sun02-WF.png" Height="35"></Image>
-                    <Label Foreground="White" VerticalAlignment="Center">12 °</Label>
+                    <Image Source="Bilder/Cloud sun02-WF.png" Height="35"/>
+                    <Label Foreground="White" VerticalAlignment="Center" Content="12 °"/>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal" VerticalAlignment="Top" Margin="10,0,0,0">
-                    <Image Source="Bilder/Wind.png" Height="35"></Image>
-                    <Label Foreground="White" VerticalAlignment="Center">12 km/h</Label>
+                    <Image Source="Bilder/Wind.png" Height="35"/>
+                    <Label Foreground="White" VerticalAlignment="Center" Content="12 km/h"/>
                 </StackPanel>
 
-                <Border BorderBrush="Gray" BorderThickness="0,0,0,1" Margin="7,0,7,0"></Border>
+                <Border BorderBrush="Gray" BorderThickness="0,0,0,1" Margin="7,0,7,0"/>
 
                 <StackPanel Orientation="Horizontal" VerticalAlignment="Top" Margin="10,0,0,0">
-                    <Image Source="Bilder/Solar.png" Height="35"></Image>
-                    <Label Foreground="White" VerticalAlignment="Center">3.545 W</Label>
+                    <Image Source="Bilder/Solar.png" Height="35"/>
+                    <Label Foreground="White" VerticalAlignment="Center" Content="3.545 W"/>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal" VerticalAlignment="Top" Margin="10,0,0,0">
-                    <Image Source="Bilder/Man-01.png" Height="35"></Image>
-                    <Label Foreground="White" VerticalAlignment="Center">0</Label>
+                    <Image Source="Bilder/Man-01.png" Height="35"/>
+                    <Label Foreground="White" VerticalAlignment="Center" Content="0"/>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal" VerticalAlignment="Top" Margin="10,0,0,0">
-                    <Image Source="Bilder/Lock-WF.png" Height="35"></Image>
-                    <Label Foreground="White" VerticalAlignment="Center">OK</Label>
+                    <Image Source="Bilder/Lock-WF.png" Height="35"/>
+                    <Label Foreground="White" VerticalAlignment="Center" Content="OK"/>
                 </StackPanel>
 
-                <Border BorderBrush="Gray" BorderThickness="0,0,0,1" Margin="7,0,7,0"></Border>
+                <Border BorderBrush="Gray" BorderThickness="0,0,0,1" Margin="7,0,7,0"/>
 
                 <StackPanel Orientation="Horizontal" VerticalAlignment="Top" Margin="10,0,0,0">
-                    <Image Source="Bilder/Message Mail-WF.png" Height="35"></Image>
-                    <Label Foreground="White" VerticalAlignment="Center">4</Label>
+                    <Image Source="Bilder/Message Mail-WF.png" Height="35"/>
+                    <Label Foreground="White" VerticalAlignment="Center" Content="4"/>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal" VerticalAlignment="Top" Margin="10,0,0,0">
-                    <Image Source="Bilder/Tasks.png" Height="35"></Image>
-                    <Label Foreground="White" VerticalAlignment="Center">1</Label>
+                    <Image Source="Bilder/Tasks.png" Height="35"/>
+                    <Label Foreground="White" VerticalAlignment="Center" Content="1"/>
                 </StackPanel>
 
-                <Border BorderBrush="Gray" BorderThickness="0,0,0,1" Margin="7,0,7,0"></Border>
+                <Border BorderBrush="Gray" BorderThickness="0,0,0,1" Margin="7,0,7,0"/>
 
-                <Button Margin="6" Padding="6" Foreground="White" Background="Black">Übersicht</Button>
-                <Button Margin="6" Padding="6" Foreground="White" Background="Black">Räume</Button>
-                <Button Margin="6" Padding="6" Foreground="White" Background="Black">Geräte</Button>
-                <Button Margin="6" Padding="6" Foreground="White" Background="Black">Gebäude</Button>
-                <Button Margin="6" Padding="6" Foreground="White" Background="Black">Sicherheit</Button>
-                <Button Margin="6" Padding="6" Foreground="White" Background="Black">Multimedia</Button>
+                <Button Margin="6" Padding="6" Foreground="White" Background="Black" Content="Übersicht"/>
+                <Button Margin="6" Padding="6" Foreground="White" Background="Black" Content="Räume"/>
+                <Button Margin="6" Padding="6" Foreground="White" Background="Black" Content="Geräte"/>
+                <Button Margin="6" Padding="6" Foreground="White" Background="Black" Content="Gebäude"/>
+                <Button Margin="6" Padding="6" Foreground="White" Background="Black" Content="Sicherheit"/>
+                <Button Margin="6" Padding="6" Foreground="White" Background="Black" Content="Multimedia"/>
 
-                <Border BorderBrush="Gray" BorderThickness="0,0,0,1" Margin="7,0,7,0"></Border>
+                <Border BorderBrush="Gray" BorderThickness="0,0,0,1" Margin="7,0,7,0"/>
 
                 <StackPanel Orientation="Horizontal" VerticalAlignment="Top" Margin="10,0,0,0">
-                    <Image Source="Bilder/Bell New-WF.png" Height="35"></Image>
-                    <Image Source="Bilder/Speaker Decrease - 01.png" Height="35"></Image>
-                    <Label Foreground="White" VerticalAlignment="Center">7</Label>
-                    <Image Source="Bilder/Speaker Increase - 02.png" Height="35"></Image>
+                    <Image Source="Bilder/Bell New-WF.png" Height="35"/>
+                    <Image Source="Bilder/Speaker Decrease - 01.png" Height="35"/>
+                    <Label Foreground="White" VerticalAlignment="Center" Content="7"/>
+                    <Image Source="Bilder/Speaker Increase - 02.png" Height="35"/>
                 </StackPanel>
 
-                <Label Foreground="White" HorizontalAlignment="Center" Padding="0,8,0,0">12:38</Label>
+                <Label Foreground="White" HorizontalAlignment="Center" Padding="0,8,0,0" />
 
             </StackPanel>
 
