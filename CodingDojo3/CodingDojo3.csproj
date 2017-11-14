@@ -93,5 +93,80 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Bilder\Bell New-WF.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Bilder\Clock-01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Bilder\Cloud-Overcast.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Bilder\Cloud sun02-WF.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Bilder\Door closed-WF.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Bilder\Forecast weather -WF.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Bilder\Head Phone-02-WF.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Bilder\House.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Bilder\Lock-WF.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Bilder\Man-01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Bilder\Message Mail-WF.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Bilder\Plug-WF.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Bilder\Rain-WF.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Bilder\Sofa-01-WF.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Bilder\Solar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Bilder\Speaker Decrease - 01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Bilder\Speaker Increase - 02.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Bilder\Speaker Mute - 04.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Bilder\Tasks.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Bilder\Temperature-02-WF.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Bilder\Temperature Warning-WF.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Bilder\Unlock-WF.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Bilder\Warning-WF.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Bilder\Weather-01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Bilder\Wind.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
