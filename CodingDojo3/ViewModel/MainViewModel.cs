@@ -1,5 +1,10 @@
+using CodingDojo3.SimulationDaten;
 using GalaSoft.MvvmLight;
+using Shared.BaseModels;
+using Shared.Interfaces;
 using System;
+using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Windows.Threading;
 
 
@@ -45,6 +50,34 @@ namespace CodingDojo3.ViewModel
         private DispatcherTimer updaZeit;
 
 
+        private Simulator sim;
+        private List<Daten> modelItems = new List<Daten>();
+
+        public ObservableCollection<Daten> SensorList { get; set; }
+        public ObservableCollection<Daten> ActorList { get; set; }
+        public ObservableCollection<string> ModeSelectionList { get; private set; }
+
+
+
+        private void DatenLaden()
+        {
+            Simulator sim = new Simulator(modelItems);
+            foreach (var item in sim.Items)
+            {
+                if (item.ItemType.Equals(typeof(ISensor)))
+                    SensorList.Add(item);
+                else if (item.ItemType.Equals(typeof(IActuator)))
+                    ActorList.Add(item);
+            }
+        }
+
+        private void UpdaZeit_Tick(object sender, EventArgs e)
+        {
+            //throw new NotImplementedException();
+            Zeit = DateTime.Now.ToLocalTime().ToLongTimeString();
+            Datum = DateTime.Now.ToLocalTime().ToShortDateString();
+
+        }
 
 
         public MainViewModel()
@@ -53,14 +86,33 @@ namespace CodingDojo3.ViewModel
             updaZeit.Interval = TimeSpan.FromSeconds(1);
             updaZeit.Tick += UpdaZeit_Tick;
             updaZeit.Start();
+
+            SensorList = new ObservableCollection<Daten>();
+            ActorList = new ObservableCollection<Daten>();
+            ModeSelectionList = new ObservableCollection<string>();
+
+            foreach (var item in Enum.GetNames(typeof(SensorModeType)))
+            {
+                ModeSelectionList.Add(item);
+            }
+            foreach (var item in Enum.GetNames(typeof(ModeType)))
+            {
+                ModeSelectionList.Add(item);
+
+            }
+
+
+            if (!IsInDesignMode)
+            {
+
+                DatenLaden();
+
+
+            }
+
+           
+
         }
 
-        private void UpdaZeit_Tick(object sender, EventArgs e)
-        {
-            //throw new NotImplementedException();
-            Zeit = DateTime.Now.ToLocalTime().ToLongTimeString();
-            Datum = DateTime.Now.ToLocalTime().ToShortDateString();
-            
-        }
     }
 }
