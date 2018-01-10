@@ -1,0 +1,46 @@
+﻿<Window x:Class="CodingDojo6.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CodingDojo6"
+        xmlns:vm="clr-namespace:CodingDojo6.ViewModel"
+        xmlns:views="clr-namespace:CodingDojo6.Views"
+        mc:Ignorable="d"
+        DataContext="{Binding Source={StaticResource Locator}, Path=Main}"
+        Title="MainWindow" Height="700" Width="1000">
+    <Grid Background="LightGray">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="150"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="60"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="1" Margin="5">
+            <Button Margin="5" Command="{Binding ProdukteKlick}">Produkte</Button>
+            <Button Margin="5" Command="{Binding WarenkorbKlick}">Warenkorb</Button>
+        </StackPanel>
+
+        <ContentControl Grid.Column="1" Grid.Row="1" Content="{Binding Aktuell}">
+            <ContentControl.Resources>
+                <DataTemplate DataType="{x:Type vm:ProduktVM}">
+                    <views:ProdukteView></views:ProdukteView>
+                </DataTemplate>
+                <DataTemplate DataType="{x:Type vm:WarenkorbVM}">
+                    <views:WarenkorbView></views:WarenkorbView>
+                </DataTemplate>
+            </ContentControl.Resources>
+        </ContentControl>
+
+        <StackPanel Grid.Row="2" Grid.Column="1" Orientation="Horizontal">
+            <Image Height="30" Source="{Binding InfoIcon}"></Image>
+            <Label VerticalAlignment="Center" Content="{Binding ProduktHinzugef}" FontSize="16" FontWeight="Bold"></Label>
+            
+        </StackPanel>
+        
+    </Grid>
+</Window>
